@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <act_window id="csskins_weapon_action" name="weapon" res_model="csskins.weapon"/>
+
+        <record id="csskins_weapon_view_tree" model="ir.ui.view">
+            <field name="name">Lista weapon</field>
+            <field name="model">csskins.weapon</field>
+            <field name="arch" type="xml">
+
+                <tree>
+                    <field name="id"/>
+                    <field name="name"/>
+                    <field name="wtype"/>
+                </tree>
+                
+            </field>
+        </record>
+
+        <record id="csskins_weapon_view_search" model="ir.ui.view">
+            <field name="name">Buscar arma</field>
+            <field name="model">csskins.weapon</field>
+            <field name="arch" type="xml">
+
+                <search>
+                    <field name="id"/>
+                    <field name="name"/>
+                    <field name="wtype"/>
+                </search>
+                
+            </field>
+        </record>
+
+        <menuitem name="Weapons" id="menu_weapon" sequence="10"/>
+        <menuitem name="Inicio" id="menu_inicio" sequence="10"/>
+        <menuitem name="Weapon" id="menu_datos" action="csskins_weapon_action" parent="menu_inicio" sequence="10"/>
+    </data>
+</odoo>
